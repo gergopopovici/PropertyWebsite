@@ -1,0 +1,18 @@
+<body>
+     <nav>
+      <img id="logo" class="logo" src="/houseicon.png" alt="logo">
+      <a href="/index">Főoldal</a>
+    </nav>
+    <div class="bejelentkezes">
+      <form action="/login/submitlogin_form" method="POST">
+        <label for="felhasznalonev">Felhasználónév:</label>
+        <input type="text" id="felhasznalonev" name="felhasznalonev" placeholder="Felhasználónév">
+        <label for="jelszo">Jelszó:</label>
+        <input type="password" id="jelszo" name="jelszo" placeholder="Jelszó">
+        <button type="submit" id="bejelentkezes">Bejelentkezés</button>
+        <button type="button" id="clear-bejelentkezes">Törlés</button>
+      </form>
+      <p>{{message}}</p>
+    <footer>Popovici Gergo-Benone <br> pgim2289 <br>523 <br> </footer>
+    <script src="script.js"></script>
+</body>

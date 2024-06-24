@@ -1,0 +1,46 @@
+<body>
+    <nav>
+      <img id="logo" class="logo" src="/houseicon.png" alt="logo">
+      {{> login}}
+      <a href="/index">Főoldal</a>
+    </nav>
+    <div id='nagy-div'>
+      {{#each hirdetes}}
+        <div>
+          <p>{{this.Varos}} {{this.Kerulet}}</p>
+          <p>Felszinterulet:{{this.Felszinterulet}}</p>
+          <p>Ar:{{this.Ar}}</p>
+          <p>Szobak:{{this.Szobak}}</p>
+          <p>Datum:{{this.Datum}}</p>
+          <br /><br />
+        </div>
+      {{/each}}
+        <div class='kepek-tarolo'>
+          {{#each kepek}}
+            <div class='kepek-div'>
+              <img class='kepek' src='/uploads/{{this.Fajlnev}}' alt='Kép' />
+          {{#if ../tulaj}}
+              <button type='button' class='delete-kep' kep-id='{{this.FenykepID}}'> Törlés</button>
+           {{/if}}
+            </div>
+          {{/each}}
+      </div>
+    </div>
+    {{#if tulaj}}
+        <div class='kepfeltolt'>
+          {{#each hirdetes}}
+            <button type='button' class='hirdetesTorleseFelhasznalo' hirdetesFelhasznalo-id="{{this.HirdetesID}}">Hírdetés Törlése</button>
+            <form action='/post/submitpic_form' method='POST' enctype='multipart/form-data'>
+              <input type='hidden' id='adId' name='adId' value='{{this.HirdetesID}}' />
+              <label for='kep'>Kép:</label>
+              <input type='file' id='kep' name='kep' />
+              <button type='submit' id='feltolt'>Kép feltöltése</button>
+              <button type='button' id='clear-kep'>Törlés</button>
+            </form>
+          {{/each}}
+          <p>{{message}}</p>
+        </div>
+      {{/if}}
+    <footer>Popovici Gergo-Benone<br>pgim2289<br>523<br></footer>
+    <script src='script.js'></script>
+</body>

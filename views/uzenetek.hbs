@@ -1,0 +1,37 @@
+<body>
+  <nav>
+    <img id='logo' class='logo' src='/houseicon.png' alt='logo' />
+    <a href='/index'>Főoldal</a>
+    {{> login}}
+  </nav>
+  <div id='felhasznalokUzenetDiv'>
+    <form id='uzenetekForm' action='/post/submit_message' method='POST'>
+      <input type="hidden"  id="felhasznaloNev" name="felhasznaloNev" value="{{felhasznalo.Nev}}">
+      <select id='felhasznaloValaszto' name = 'felhasznaloValaszto'>
+        <option value=''>Válasszon felhasználót</option>
+        {{#each felhasznalok}}
+          <option value='{{this.FelhasznaloID}}'>{{this.FelhasznaloNev}}</option>
+        {{/each}}
+      </select>
+      <textarea id='uzenet' name='uzenet' placeholder='Írja be az üzenetet'></textarea>
+      <button type='submit' id='uzenetkuld'>Küldés</button>
+    </form>
+    <p>{{message}}</p>
+  </div>
+  <div id='uzenetekDiv'>
+    {{#each olvasatlan}}
+      <p>Olvasatlan üzenetek:{{this.FelhasznaloNev}}</p>
+    {{/each}}
+    <form id="uzenetTekinto" action="/post/view_messages" method="POST">
+     <input type="hidden"  id="felhasznaloNev" name="felhasznaloNev" value="{{felhasznalo.Nev}}">
+     <select id='felhasznaloValaszto2' name = 'felhasznaloValaszto2'>
+        <option value=''>Válasszon felhasználót</option>
+        {{#each felhasznalok2}}
+          <option value='{{this.FelhasznaloID}}'>{{this.FelhasznaloNev}}</option>
+        {{/each}}
+      </select>
+      <button type='submit' id='uzenetekMegtekint'>Üzenetek megtekintése</button>
+  </div>
+  <footer>Popovici Gergo-Benone<br>pgim2289<br>523<br></footer>
+  <script src='script.js'></script>
+</body>

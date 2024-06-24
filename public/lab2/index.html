@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="HU">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Aritmetika kérdés-válasz párosítás</title>
+  </head>
+  <body>
+    <header>Aritmetika kérdés-válasz párosítás</header>
+    <br><br>
+    <form id="form-id">
+      <div>
+        <label for="felhasznalonev">Név:</label>
+        <input type="text" id="felhasznalonev" name="felhasznalonev" placeholder="Lászlo" required>
+      </div>
+      <br>
+      <div class="checkbox-osztaly">
+        <input type="checkbox" id="osszeadas" name="osszeadas" value="osszeadas">
+        <label for="osszeadas">Összeadás</label>
+      </div>
+      <br>
+      <div class="checkbox-osztaly">
+        <input type="checkbox" id="kivonas" name="kivonas" value="kivonas">
+        <label for="kivonas">Kivonás</label>
+      </div>
+      <br>
+      <div class="checkbox-osztaly">
+        <input type="checkbox" id="szorzas" name="szorzas" value="szorzas">
+        <label for="szorzas">Szorzás</label>
+      </div>
+      <br>
+      <div class="checkbox-osztaly">
+        <input type="checkbox" id="osztas" name="osztas" value="osztas">
+        <label for="osztas">Osztás</label>
+      </div>
+      <br>
+      <div>
+        <label for="kerdesek">Kérdések száma:</label>
+        <select id="kerdesek" name="kerdesek" required>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+       </div>
+      <br >
+      <div>
+        <button type="submit" id="start">Játék indítása</button>
+      </div>
+    </form>
+    <br><br>
+    <div class="canvas-feladatok">
+      <div>
+        <h2>Játék</h2>
+        <p>Játékosként annyiszor tudol párositani amennyi kérdésed van alapértelmezetten(5)</p>
+        <br>
+        <p>
+          A játék végén zöld színnel fognak megjelenni a jól párosított vonalak a rosszúl párosítottak maradnak
+          feketén.
+        </p>
+        <canvas id="muveletek-canvas" width="800" height="600"></canvas>
+      </div>
+    </div>
+    <br><br>
+    <footer>Popovici Gergő-Benone<br>pgim2289<br>523<br></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

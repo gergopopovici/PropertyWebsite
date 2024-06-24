@@ -1,0 +1,98 @@
+.kereso {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+.kereso input,
+.kereso button {
+  margin-right: 10px;
+}
+nav {
+  background-color: #f5deb3;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+a {
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+a:hover {
+  background-color: darkblue;
+}
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: green;
+}
+div#nagy-div {
+  font-family: sans-serif;
+  font-size: large;
+  font-weight: bold;
+}
+.kepek {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin: 10px;
+}
+div#keresettElemek {
+  font-family: sans-serif;
+  font-size: large;
+  font-weight: bold;
+}
+.kepek-tarolo {
+  display: flex;
+}
+button {
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  padding: 10px;
+  border: 1px solid black;
+}
+#keresettElemek {
+  display: flex;
+  flex-wrap: wrap;
+}
+#uzenetekForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+#uzenetekForm > * {
+  margin-bottom: 15px;
+}
+footer {
+  background-color: #f5deb3;
+  padding: 10px;
+  border-radius: 10px;
+}

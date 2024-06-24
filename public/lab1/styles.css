@@ -1,0 +1,137 @@
+/*gordulo hatterkep*/
+body{
+    background-image: url(hatterkep.jpg);
+    background-repeat:repeat;
+}
+/*sakk tabla*/
+tr:nth-child(odd) td:nth-child(odd){
+    padding: 8px;
+    background-color: red;
+}
+tr:nth-child(even) td:nth-child(even){
+    padding: 8px;
+    background-color:red;
+}
+tr:nth-child(even) td:nth-child(odd){
+    padding: 8px;
+    background-color: violet;
+}
+tr:nth-child(odd) td:nth-child(even){
+    padding: 8px;
+    background-color:violet;
+}
+/*focim alcim*/
+h1,h2{
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+/*linkek formaja szine beallitasa*/
+.elso-link{
+    color: blue;
+    text-decoration:none
+}
+.elso-link:hover{
+    text-decoration:underline;
+}
+.elso-link:active{
+    color:yellow;
+    text-decoration:none;
+    font-size:larger
+}
+.elso-link:visited{
+    color:purple
+}
+.masodik-link{
+    color:violet;
+    text-decoration:none;
+}
+.masodik-link:hover{
+  text-decoration:underline;
+  color:blueviolet
+}
+.masodik-link:active{
+    font-size: smaller;
+}
+.masodik-link:visited{
+    color:coral
+}
+/*sorszam nelkuli lista stilusanak beallitasa*/
+ul.elsolista{
+    color: green;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+ul.masodiklista{
+    color:blue;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+/*em es p elemekre hasznalt stilus class*/
+.stilus{
+    text-align: center;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    color:red
+}
+.stilus2{
+    text-align: justify;
+    font-size: large;
+}
+/*nav elemben levo div elem stilusa, kerekitett szegely*/
+nav #nav-div{
+    border-radius: 30px;
+    height: 50px;
+    padding:5px;
+    border-width:5px;
+    border-color: red;
+    border-style:solid
+}
+/*div stilus szaggatot vonallal*/
+.div-stilus{
+    border-style:dashed;
+    padding: 15px 750px 15px 15px;
+    border-top-color: orange;
+    border-right-color: black;
+    border-bottom-color: blue;
+    border-left-color: red;
+}
+/*tranzicio*/
+.podium{
+    display:flex;
+    align-items: flex-end;
+}
+
+ .elso-helyezes {
+    background-color: goldenrod;
+    width : 130px;
+    height : 85px;
+    text-align:center;
+    transition: height 2s;
+}
+
+.podium .masodik-helyezes {
+    background-color: silver;
+    width : 130px;
+    height : 85px;
+    text-align:center;
+    transition: height 2s;
+}
+
+.podium .harmadik-helyezes {
+    background-color: #FF9033;
+    width : 130px;
+    height : 85px;
+    text-align:center;
+    transition: height 2s;
+}
+.elso-helyezes:hover {
+    height: 250px;
+}
+.masodik-helyezes:hover {
+    height: 220px;
+}
+.harmadik-helyezes:hover {
+    height: 200px;
+}

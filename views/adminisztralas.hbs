@@ -1,0 +1,32 @@
+<body>
+  <nav>
+    <img id="logo" class="logo" src="/houseicon.png" alt="logo">
+    {{>login}}
+    <a href='/index'>Főoldal</a>
+  </nav>
+  <input type="text" id="kereses" placeholder="Keresés...">
+  <table class="tableUsers">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Név</th>
+        <th>Email</th>
+        <th>FelhasználóNév</th>
+        <th>Admin</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each felhasznalok}}
+        <tr>
+          <td>{{this.FelhasznaloID}}</td>
+          <td>{{this.Nev}}</td>
+          <td>{{this.Email}}</td>
+          <td>{{this.FelhasznaloNev}}</td>
+          <td><input type="checkbox" class="admin-checkbox" adminCheckBoxID="{{this.FelhasznaloID}}" {{#if this.CsoportID}} checked{{/if}}></td>
+          {{/each}}
+    </tbody>
+  </table>
+  <p>{{message}}</p>
+  <footer>Popovici Gergo-Benone <br> pgim2289 <br>523 <br> </footer>
+  <script src='script.js'></script>
+</body>

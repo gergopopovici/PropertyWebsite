@@ -1,0 +1,47 @@
+    <nav>
+      <img id="logo" class="logo" src="/houseicon.png" alt="logo">
+      {{> login}}
+      <a href='/hirdetes'>Hirdetés</a>
+      {{#if vissza}}
+        <a href="/index">Vissza</a>
+      {{/if}}
+      {{#if admin}}
+        <a href="/adminisztralas">Adminisztrálás</a>
+      {{/if}}
+      {{#if felhasznalo}}
+        <a href="/uzenetek">Üzenetek</a>
+      {{/if}}
+    </nav>
+    <div class='kereso'>
+      <form action='/post/submit_form' method='POST'>
+        <label for='varos'>Város:</label>
+        <input type='text' id='varos' name='varos' placeholder='Kolozsvár' />
+        <label for='kerulet'>Kerület:</label>
+        <input type='text' id='kerulet' name='kerulet' placeholder='Marasti' />
+        <label for='minar'>Minimum ár:</label>
+        <input type='number' id='minar' name='minar' placeholder='Minimum ár' />
+        <label for='maxar'>Maximum ár:</label>
+        <input type='number' id='maxar' name='maxar' placeholder='Maximum ár' />
+        <button type='submit' id='keres'>Keresés</button>
+        <button type='button' id='clear'>Törlés</button>
+      </form>
+    </div>
+    <div id='nagy-div'>
+      {{#each hirdetesek}}
+        <div class='hirdetes' hirdetes-id='{{this.HirdetesID}}'>
+          {{#if ../admin}}
+           <button type='button' class='delete-hirdetes' hirdetes-id='{{this.HirdetesID}}'>Törlés</button>
+          {{/if}}
+          <p class='sor'>{{this.Varos}} {{this.Kerulet}}</p>
+          <p class='sor'>Felszinterulet:{{this.Felszinterulet}}</p>
+          <p class='sor'>Ar:{{this.Ar}}</p>
+          <div id='{{this.HirdetesID}}'></div>
+          <a href='/tovabb?id={{this.HirdetesID}}'>Tovább</a>
+          <br /><br />
+        </div>
+      {{/each}}
+      <p>{{message}}</p>
+    </div>
+    <footer>Popovici Gergo-Benone<br>pgim2289<br>523<br></footer>
+    <script src='script.js'></script>
+  </body>

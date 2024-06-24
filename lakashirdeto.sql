@@ -1,0 +1,10 @@
+use master
+CREATE LOGIN lakas WITH PASSWORD = 'lakas';
+CREATE USER lakas FOR LOGIN lakas;
+GRANT CREATE DATABASE TO lakas;
+GO
+
+SETUSER 'lakas'
+GO
+CREATE DATABASE [hirdeto]
+GO
